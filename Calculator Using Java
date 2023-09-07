@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Calculator {
+    public static  void add(float a,float b){
+        System.out.println("sum = "+(a+b));
+    }public static  void sub(float a,float b){
+        System.out.println("sub = "+(a-b));
+    }public static void mul(float a,float b){
+        System.out.println("Mulitiplication = "+(a*b));
+    }public static void div(float a,float b){
+        System.out.println("Division = "+(a/b));
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        float a,b;
+        System.out.println("enter 2 numbers\n");
+        a=s.nextFloat(); b=s.nextFloat();
+
+
+        while(true) {
+            System.out.println("Enter your choice\n");
+            System.out.println(" 1 Add \n 2 Sub\n 3 Mulitply\n 4 Divide\n 5 Exit");
+            int choice=s.nextInt();
+
+            switch (choice) {
+                case 1:
+                    add(a, b);
+                    break;
+                case 2:
+                    sub(a, b);
+                    break;
+                case 3:
+                    mul(a, b);
+                    break;
+                case 4:
+                    div(a, b);
+                    break;
+                case 5:
+                    System.out.println("Thank you for using our my calculator\nExiting");
+                    return;
+                default:
+                    System.out.println("Enter valid input");
+                    break;
+            }
+        }
+
+    }
+}
